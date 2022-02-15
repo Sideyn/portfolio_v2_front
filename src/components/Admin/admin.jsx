@@ -1,10 +1,9 @@
-import React from 'react'
-import './admin.css'
+import React from "react";
+
+import "./admin.css";
 
 function admin() {
-  return (
-    <div>admin</div>
-  )
+  return <div className="admin">admin</div>;
 }
 
-export default admin
+export default admin;
