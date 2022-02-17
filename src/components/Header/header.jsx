@@ -4,7 +4,7 @@ import "./header.css";
 
 function header() {
   return (
-    <div className="Header">
+    <div className="header">
       <section className="title_admin_button">
         <h1 className="glitch" id="h1_header">
           <span aria-hidden="true">PORTFOLIO</span>
@@ -22,10 +22,10 @@ function header() {
         </div>
       </section>
 
-      <section className="elements">
+      <section className="elements_header">
         <div className="hr_header" />
-        <div className="circle_container">
-          <span className="circle" />
+        <div className="circle_container_header">
+          <span className="circle_header" />
         </div>
       </section>
     </div>
