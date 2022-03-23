@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "font-1";
+  src: url(/assets/fonts/Future.ttf);
+}
+
+$font-1: "font-1", sans-serif;
+
+$color-1: #f7f7f7;
+$color-2: #29f3c3;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-1;
+  overflow: hidden;
+}
+
+body {
+  background: url(../../src/assets/back.png);
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 5px 5px 0;
+  color: $color-1;
+  font-size: 2.3em;
+  font-weight: lighter;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $color-1;
+}
+
+hr {
+  background-color: $color-2;
+  border: none;
+  box-shadow: 0px 0px 13px 2px #29f3c3;
+}
+
+.circle {
+  background-color: $color-2;
+  color: $color-2;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 2px #29f3c3;
+}
