@@ -1,12 +1,10 @@
 import React from "react";
-import TitleHome from "../components/header/Title_home";
-import CvBttn from "../components/home/Cv_bttn";
+import Header from "../components/header/Header";
 
 function Home() {
   return (
     <div className="home">
-      <CvBttn />
-      <TitleHome />
+      <Header />
     </div>
   );
 }

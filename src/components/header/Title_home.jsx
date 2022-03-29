@@ -5,8 +5,6 @@ function Title_home() {
     <div className="titleHome">
       <h1 className="glitch">PORTFOLIO</h1>
 
-      <div className="circle" id="circle_home" />
-
       <hr className="hr_home" />
     </div>
   );

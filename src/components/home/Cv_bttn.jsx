@@ -3,9 +3,9 @@ import React from "react";
 function Cv_bttn() {
   return (
     <div className="cvBttn">
-      {/* <button className="cv_bttn" type="button">
+      <button className="cv_bttn" type="button">
         CV
-      </button> */}
+      </button>
     </div>
   );
 }
