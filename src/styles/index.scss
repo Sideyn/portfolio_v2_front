@@ -1,10 +1,13 @@
 @import "./settings";
+@import "./components/home/home";
+@import "./components/header/header.scss";
+@import "./components/footer/footer.scss";
 @import "./components/admin/form_admin";
 @import "./components/admin/title_admin";
 @import "./components/footer/social_network";
 @import "./components/header/title_home";
 @import "./components/header/title_project";
-@import "./components/home/admin_bttn";
+@import "./components/header/admin_bttn";
 @import "./components/home/caroussel_home";
 @import "./components/home/cv_bttn";
 @import "./components/home/description_home";

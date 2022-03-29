@@ -50,16 +50,35 @@
   }
 }
 
-.hr_home {
-  height: 5px;
-  width: 90vw;
-  position: absolute;
-  transform: translateX(11%);
+.titleHome {
+  height: 8vh;
 }
 
-#circle_home {
-  height: 8px;
-  width: 8px;
-  position: absolute;
-  transform: translateX(150%);
+.hr_home {
+  height: 3px;
+  width: 100%;
+  margin-top: -28px;
+}
+
+@media screen and (min-width: 768px) {
+  .hr_home {
+    height: 5px;
+    margin-top: -35px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hr_home {
+    margin-top: -45px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .titleHome {
+    height: 9vh;
+  }
+
+  .hr_home {
+    margin-top: -55px;
+  }
 }

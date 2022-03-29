@@ -1,0 +1,30 @@
+.admin_bttn {
+  position: absolute;
+  margin: -10px 0 0 -45px;
+  font-size: 1.6em;
+  transform: rotate(0.75turn);
+  background-color: black;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .admin_bttn {
+    margin: -6px 0 0 -57px;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .admin_bttn {
+    margin: -5px 0 0 -62px;
+    font-size: 2.2em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .admin_bttn {
+    margin: 0 0 0 -67px;
+    font-size: 2.4em;
+  }
+}
