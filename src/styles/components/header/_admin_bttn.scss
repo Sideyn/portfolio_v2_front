@@ -8,10 +8,23 @@
   padding: 5px;
 }
 
+.vertical_hr_admin {
+  position: absolute;
+  margin-left: -39%;
+  height: 3px;
+  width: 100%;
+  transform: rotate(0.75turn);
+}
+
 @media screen and (min-width: 768px) {
   .admin_bttn {
     margin: -6px 0 0 -57px;
     font-size: 2em;
+  }
+
+  .vertical_hr_admin {
+    margin-left: -43%;
+    height: 5px;
   }
 }
 
@@ -20,11 +33,19 @@
     margin: -5px 0 0 -62px;
     font-size: 2.2em;
   }
+
+  .vertical_hr_admin {
+    margin-left: -45%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .admin_bttn {
     margin: 0 0 0 -67px;
     font-size: 2.4em;
+  }
+
+  .vertical_hr_admin {
+    margin-left: -46%;
   }
 }

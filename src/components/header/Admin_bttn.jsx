@@ -7,6 +7,8 @@ function Admin_bttn() {
       <NavLink exact="true" to="/admin" className="admin_bttn">
         ADMIN
       </NavLink>
+
+      <hr className="vertical_hr_admin" />
     </div>
   );
 }
