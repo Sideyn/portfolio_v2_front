@@ -1,0 +1,32 @@
+.img_me {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.me {
+  width: 250px;
+}
+
+.hr_me {
+  height: 8px;
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .me {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .me {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .me {
+    width: 500px;
+  }
+}
