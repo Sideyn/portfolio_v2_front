@@ -2,7 +2,7 @@ import React from "react";
 
 function Title_project() {
   return (
-    <div>
+    <div className="title_project">
       <section className="elements_home_project">
         <span className="circle" id="circle_home" />
 

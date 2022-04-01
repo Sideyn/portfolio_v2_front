@@ -16,7 +16,7 @@ $color-2: #29f3c3;
   margin: 0;
   padding: 0;
   font-family: $font-1;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body {
@@ -61,7 +61,6 @@ hr {
   background-color: $color-2;
   border: none;
   box-shadow: 0px 0px 10px 2px #29f3c3;
-  width: 100%;
 }
 
 .circle {
