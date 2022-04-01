@@ -4,7 +4,7 @@ function Title_description() {
   return (
     <div className="title_description">
       <section className="elements_home_description">
-        <h2>DESCRIPTION</h2>
+        <h3>DESCRIPTION</h3>
 
         <span className="circle" id="circle_home" />
 

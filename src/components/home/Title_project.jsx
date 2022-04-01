@@ -8,7 +8,7 @@ function Title_project() {
 
         <hr className="line_home_project" />
 
-        <h2>PROJETS</h2>
+        <h3>PROJETS</h3>
       </section>
     </div>
   );
