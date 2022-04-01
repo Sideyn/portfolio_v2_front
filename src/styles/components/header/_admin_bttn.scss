@@ -1,49 +1,29 @@
 .admin_bttn {
   position: absolute;
-  margin: -10px 0 0 -45px;
-  font-size: 1.6em;
+  margin: -15px 0 0 -45px;
+  font-size: 1.4em;
   transform: rotate(0.75turn);
   border-radius: 3px;
   padding: 5px;
 }
 
-.vertical_hr_admin {
-  position: absolute;
-  margin-left: -39%;
-  height: 3px;
-  transform: rotate(0.75turn);
-}
-
 @media screen and (min-width: 768px) {
   .admin_bttn {
-    margin: -6px 0 0 -57px;
-    font-size: 2em;
-  }
-
-  .vertical_hr_admin {
-    margin-left: -43%;
-    height: 5px;
+    margin: 5px 0 0 -57px;
+    font-size: 1.8em;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .admin_bttn {
-    margin: -5px 0 0 -62px;
-    font-size: 2.2em;
-  }
-
-  .vertical_hr_admin {
-    margin-left: -45%;
+    margin: 15px 0 0 -58px;
+    font-size: 1.9em;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .admin_bttn {
-    margin: 0 0 0 -67px;
-    font-size: 2.4em;
-  }
-
-  .vertical_hr_admin {
-    margin-left: -46%;
+    margin: 15px 0 0 -60px;
+    font-size: 2em;
   }
 }

@@ -1,3 +1,7 @@
+.picture_me {
+  margin-top: 10px;
+}
+
 .img_me {
   display: flex;
   justify-content: flex-end;
@@ -14,6 +18,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .picture_me {
+    margin-top: -50px;
+  }
+
   .me {
     width: 350px;
   }

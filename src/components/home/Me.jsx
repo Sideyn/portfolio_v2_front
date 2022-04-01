@@ -3,7 +3,7 @@ import me from "../../assets/me.png";
 
 function Me() {
   return (
-    <div>
+    <div className="picture_me">
       <div className="img_me">
         <img src={me} alt="moi" className="me" />
       </div>

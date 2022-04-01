@@ -2,7 +2,7 @@ import React from "react";
 
 function Cv_bttn() {
   return (
-    <div>
+    <div className="cv_button">
       <button className="cv_bttn" type="button">
         <a
           href="https://sideyn.github.io/cv/"

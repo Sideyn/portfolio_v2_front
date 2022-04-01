@@ -2,7 +2,7 @@ import React from "react";
 
 function Title_description() {
   return (
-    <div>
+    <div className="title_description">
       <section className="elements_home_description">
         <h2>DESCRIPTION</h2>
 
