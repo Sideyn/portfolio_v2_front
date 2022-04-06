@@ -26,9 +26,12 @@ function Form_login() {
             </label>
           </div>
 
-          <button type="submit" className="login_button">
-            CONNECTEZ-VOUS
-          </button>
+          <div className="test">
+            {" "}
+            <button type="submit" className="login_button">
+              CONNECTEZ-VOUS
+            </button>
+          </div>
         </form>
       </section>
     </div>

@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
-import tst from "../../assets/test.png";
+// import tst from "../../assets/test.png";
 
 const slideImages = [
   {
-    url: { tst },
+    url: "https://i.ibb.co/6PMcHWK/test.png",
   },
   {
     url: "https://i.ibb.co/6PMcHWK/test.png",
