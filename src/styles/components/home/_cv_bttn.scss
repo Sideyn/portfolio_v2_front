@@ -91,7 +91,7 @@
       box-shadow: 0px 0px 5px 2px #29f3c3;
     }
     .line-6 {
-      transform: translateY(-2px);
+      transform: translateY(0px);
       box-shadow: 0px 0px 5px 2px #29f3c3;
       height: 50px;
     }
@@ -102,13 +102,30 @@
   .cv_bttn {
     font-size: 1.5em;
     margin: 80px 0 0 200px;
+    span {
+      position: absolute;
+      transition: all 900ms ease-in-out;
+      &.line-2 {      
+        width: 135px;
+      }
+      &.line-3 {        
+        width: 60px;
+      }
+      &.line-5 {        
+        height: 65px;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .cv_bttn {
     font-size: 1.8em;
+    max-width: 200px;
+    line-height: 70px;
   }
+
+
 }
 
 @media screen and (min-width: 1440px) {

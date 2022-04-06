@@ -22,7 +22,6 @@
 .login_form {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 }
 
 .block_login {
@@ -30,8 +29,9 @@
 }
 
 .login_form input {
-    width: 250px;
-    height: 38px;
+    width: 70vw;
+    max-width: 500px;
+    height: 40px;
     font-family: 'Orbitron', sans-serif;
     border-style: none;
     margin-top: 10px;
@@ -45,11 +45,21 @@
     border: 2px solid $color-2;
 }
 
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
-    border-radius: 15px;
+    border-radius: 25px;
     color: white;
     height: 40px;
+    padding: 8px;
     border: 2px solid $color-2;
     margin-top: 30px;
     transition: 1s ease;
@@ -65,66 +75,34 @@
 
 
 @media screen and (min-width: 768px) {
-
-    .login_container {
-        padding: 80px;
-
-    }
-
-    .block_login {
-        margin-top: 50px;
-    }
-
-    .login_form input {
-        width: 300px;
-        height: 50px;
+   .login_form input {
         font-size: 0.8em;
     }
 
     .login_button {
-        height: 50px;
-        margin-top: 40px;
         font-size: 0.9em;
+        padding: 20px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .login_container {
-        padding: 90px;
-    }
-
-    .block_login {
-        margin-top: 60px;
-    }
 
     .login_form input {
-        width: 350px;
         font-size: 0.9em;
     }
 
     .login_button {
-        height: 50px;
-        margin-top: 50px;
         font-size: 1em;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .login_container {
-        padding: 110px;
-    }
 
-    .block_login {
-        margin-top: 70px;
-    }
-
-    .login_form input {
-        width: 450px;
+    .login_form input {    
         font-size: 1em;
     }
 
     .login_button {
-        margin-top: 60px;
         font-size: 1.1em;
     }
 }

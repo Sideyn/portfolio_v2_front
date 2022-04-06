@@ -1,7 +1,7 @@
 .elements_home_description {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 25px;
   align-items: center;
 }
 
@@ -33,12 +33,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .elements_home_description {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
   .elements_home_description {
     margin-top: 30px;
   }

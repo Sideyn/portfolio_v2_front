@@ -1,11 +1,11 @@
 import React from "react";
 import AdminBttn from "./Admin_bttn";
-import TitleHome from "./Title_home";
+import MainTitleHome from "./Main_title_home";
 
 function Header() {
   return (
     <div className="header">
-      <TitleHome />
+      <MainTitleHome />
       <AdminBttn />
     </div>
   );

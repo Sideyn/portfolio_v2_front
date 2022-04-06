@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Title_home() {
+function Main_title_home() {
   return (
     <div className="titleHome">
       <NavLink exact="true" to="/">
@@ -13,4 +13,4 @@ function Title_home() {
   );
 }
 
-export default Title_home;
+export default Main_title_home;

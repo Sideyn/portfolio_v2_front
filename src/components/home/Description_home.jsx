@@ -11,9 +11,7 @@ function Description_home() {
         web. Vous trouverez ici tout mes projets où à travers ceux-ci vous
         pourrez prendre part de mon expérience. <br />
         <br /> Vous trouverez aussi juste ci-dessous mon CV en cliquant sur le
-        bouton. <br /> <br /> (En effet comme vous avez pu le constater mes
-        cheveux sur la photo sont coupés nette c'est normal, c'est pour plus de
-        style.)
+        bouton.
       </p>
     </div>
   );
