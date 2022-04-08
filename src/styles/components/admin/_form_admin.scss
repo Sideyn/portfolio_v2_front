@@ -73,20 +73,21 @@ section .buttons {
     display: flex;
     align-items: center;
     background-color: black;
+    background-image: radial-gradient( rgb(0, 0, 0), rgba(0, 0, 0, 0));
     border-radius: 50px;
     color: white;
     height: 30px;
     border: 2px solid $color-2;
     margin-top: 15px;
-    transition: 0.7s ease;
+    transition: 0.8s ease;
     padding: 8px;
 
     &:hover {
-        background-color: $color-2;
-        border-radius: 0;
+        background-color: $color-2 ;
+        box-shadow: 0px 0px 5px 1px $color-2;
+        border-radius: 5px;
         border: none;
-        color: black;
-    }
+     }
 }
 
 @media screen and (min-width: 768px) {

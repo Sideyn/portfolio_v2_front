@@ -2,7 +2,7 @@ import React from "react";
 
 function Cv_bttn() {
   return (
-    <div className="cv_button">
+    <>
       <button className="cv_bttn" type="button">
         <a
           href="https://sideyn.github.io/cv/"
@@ -18,7 +18,7 @@ function Cv_bttn() {
         <span class="line-5"></span>
         <span class="line-6"></span>
       </button>
-    </div>
+    </>
   );
 }
 

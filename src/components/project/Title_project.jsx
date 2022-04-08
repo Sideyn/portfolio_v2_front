@@ -1,7 +1,11 @@
 import React from "react";
 
 function Title_project() {
-  return <div>Title_project</div>;
+  return (
+    <>
+      <h2>PROJETS</h2>
+    </>
+  );
 }
 
 export default Title_project;

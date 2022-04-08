@@ -10,21 +10,19 @@ function Form_admin() {
         <form className="form_admin" onSubmit="">
           <section className="selectors">
             <label htmlFor="select_action">
-              <div className="tst">
-                <select name="action">
-                  <option value="" onClick="">
-                    Ajouter
-                  </option>
+              <select name="action">
+                <option value="" onClick="">
+                  Ajouter
+                </option>
 
-                  <option value="" onClick="">
-                    Modifier
-                  </option>
+                <option value="" onClick="">
+                  Modifier
+                </option>
 
-                  <option value="" onClick="">
-                    Supprimer
-                  </option>
-                </select>
-              </div>
+                <option value="" onClick="">
+                  Supprimer
+                </option>
+              </select>
             </label>
 
             <label htmlFor="select_update">

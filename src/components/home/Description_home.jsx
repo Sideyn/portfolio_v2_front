@@ -2,7 +2,7 @@ import React from "react";
 
 function Description_home() {
   return (
-    <div className="description_top">
+    <>
       <p className="description_home">
         Bienvenue sur mon Portfolio je m'appelle Sidney Croset, j'ai 24 ans.{" "}
         <br /> <br />
@@ -13,7 +13,7 @@ function Description_home() {
         <br /> Vous trouverez aussi juste ci-dessous mon CV en cliquant sur le
         bouton.
       </p>
-    </div>
+    </>
   );
 }
 
