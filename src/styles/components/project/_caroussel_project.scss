@@ -1,0 +1,141 @@
+.caroussel_project {
+  margin: 90px 0 25px 0;
+}
+
+.elements_project {
+  display: flex;
+  margin: 15px 0 15px 15px;
+  align-items: center;
+}
+
+#circle_project {
+  box-shadow: none;
+  width: 6px;
+  height: 6px;
+  margin: 0 20px;
+}
+
+.line_project {
+  box-shadow: none;
+  width: 20vw;
+  background-color: $color-2;
+  height: 2px;
+}
+
+// .mySwiper {
+//   width: 350px;
+//   height: 300px;
+//   padding: 50px;
+// }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+:root {
+  --swiper-navigation-size: 25px
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $color-2;
+}
+
+.title_description_project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 25px;
+}
+
+.title_description_project a {
+  text-decoration: 1px underline $color-2;
+}
+
+.infos_description_project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_description_project,
+.infos_description_project {
+  border: 1px solid $color-2;
+  background: rgba(255, 255, 255, 0.11);
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.description_project {
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .caroussel_project {
+    margin: 120px 0 25px 0;
+  }
+
+  .elements_project {
+    margin-top: 35px;
+  }
+
+  #circle_project {
+    width: 8px;
+    height: 8px;
+    margin: 0 30px;
+  }
+
+  .line_project {
+    width: 18vw;
+    height: 2px;
+  }
+
+  .title_description_project {
+    line-height: 35px;
+  }
+
+  .title_description_project,
+  .infos_description_project {
+    margin: 20px;
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .elements_project {
+    margin-top: 45px;
+  }
+
+  .title_description_project {
+    line-height: 40px;
+  }
+
+  .title_description_project,
+  .infos_description_project {
+    margin: 30px;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+  .title_description_project,
+  .infos_description_project {
+    margin: 40px;
+    padding: 15px;
+  }
+}

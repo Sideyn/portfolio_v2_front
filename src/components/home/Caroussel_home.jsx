@@ -17,14 +17,14 @@ const slideImages = [
 
 function Caroussel_home() {
   return (
-    <div className="slide-container">
+    <div className="slide-container_home">
       <div className="light">
         <Slide>
           {slideImages.map((slideImage, index) => (
             <NavLink exact="true" to="/project">
               <div className="each-slide" key={index}>
                 <div
-                  className="slide_container_img"
+                  className="slide_container_home_img"
                   style={{ backgroundImage: `url(${slideImage.url})` }}
                 >
                   {/* <span>{slideImage.caption}</span> */}

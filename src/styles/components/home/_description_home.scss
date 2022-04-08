@@ -1,26 +1,26 @@
 .description_home {
-  margin: 20px 80px;
+  margin: 30px 30px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.11);
   border-radius: 5px;
   line-height: 1.5;
-  text-align: left;
+  border: 1px solid $color-2;
 }
 
 @media screen and (min-width: 768px) {
   .description_home {
-    margin: 20px 200px 20px 100px;
+    margin: 35px 200px 20px 100px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .description_home {
-    margin: 20px 300px 20px 100px;
+    margin: 45px 300px 20px 100px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .description_home {
-    margin: 20px 700px 20px 100px;
+    margin: 55px 500px 20px 100px;
   }
 }

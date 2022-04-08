@@ -2,7 +2,7 @@ import React from "react";
 
 function Title_description() {
   return (
-    <div className="title_description">
+    <>
       <section className="elements_home_description">
         <h3>DESCRIPTION</h3>
 
@@ -10,7 +10,7 @@ function Title_description() {
 
         <hr className="line_home" />
       </section>
-    </div>
+    </>
   );
 }
 

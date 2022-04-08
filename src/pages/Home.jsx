@@ -7,14 +7,15 @@ import DescriptionHome from "../components/home/Description_home";
 import DescriptionProject from "../components/home/Description_project";
 import Me from "../components/home/Me";
 import TitleDescription from "../components/home/Title_description";
-import Title_home from "../components/home/Title_home";
+import TitleHome from "../components/home/Title_home";
 import TitleProject from "../components/home/Title_project";
+import Skills from "../components/home/Skills";
 
 function Home() {
   return (
     <div className="home">
       <Header />
-      <Title_home />
+      <TitleHome />
       <TitleDescription />
       <DescriptionHome />
       <CvBttn />
@@ -22,6 +23,7 @@ function Home() {
       <TitleProject />
       <DescriptionProject />
       <CarousselHome />
+      <Skills />
       <Footer />
     </div>
   );

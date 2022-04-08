@@ -1,26 +1,28 @@
-.description_project {
+.description_home_project {
   margin: 30px 30px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.11);
   border-radius: 5px;
   line-height: 1.5;
+  border: 1px solid $color-2;
   text-align: left;
+
 }
 
 @media screen and (min-width: 768px) {
-  .description_project {
+  .description_home_project {
     margin: 50px 50px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .description_project {
+  .description_home_project {
     margin: 50px 60px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .description_project {
+  .description_home_project {
     margin: 50px 70px;
   }
 }

@@ -1,6 +1,6 @@
 .admin_bttn {
   position: absolute;
-  margin: -15px 0 0 -45px;
+  margin: 15px 0 0 -45px;
   font-size: 1.4em;
   transform: rotate(0.75turn);
   border-radius: 3px;
@@ -11,21 +11,21 @@
 
 @media screen and (min-width: 768px) {
   .admin_bttn {
-    margin: 5px 0 0 -57px;
+    margin: 35px 0 0 -57px;
     font-size: 1.8em;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .admin_bttn {
-    margin: 15px 0 0 -58px;
+    margin: 45px 0 0 -58px;
     font-size: 1.9em;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .admin_bttn {
-    margin: 15px 0 0 -60px;
+    margin: 25px 0 0 -60px;
     font-size: 2em;
   }
 }

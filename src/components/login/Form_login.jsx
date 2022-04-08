@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Form_login() {
   return (
@@ -8,14 +9,14 @@ function Form_login() {
 
         <form className="login_form" onSubmit="">
           <div className="block_login">
-            <h4>IDENTIFIANT :</h4>
+            <h5>IDENTIFIANT :</h5>
             <label htmlFor="mail">
               <input type="email" placeholder="MAIL" value="" onChange="" />
             </label>
           </div>
 
           <div className="block_login">
-            <h4>MOT DE PASSE :</h4>
+            <h5>MOT DE PASSE :</h5>
             <label htmlFor="password">
               <input
                 type="password"
@@ -28,9 +29,11 @@ function Form_login() {
 
           <div className="test">
             {" "}
-            <button type="submit" className="login_button">
-              CONNECTEZ-VOUS
-            </button>
+            <NavLink exact="true" to="/admin">
+              <button type="submit" className="login_button">
+                CONNECTEZ-VOUS
+              </button>
+            </NavLink>
           </div>
         </form>
       </section>
