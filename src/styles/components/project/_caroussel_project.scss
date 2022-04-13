@@ -28,10 +28,10 @@
 //   padding: 50px;
 // }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
+// .swiper {
+//   width: 100%;
+//   height: 100%;
+// }
 
 .swiper-slide img {
   display: block;
@@ -85,6 +85,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .swiper-slide img {
+    width: 100%;
+    height: 300px;
+  }
+
   .caroussel_project {
     margin: 120px 0 25px 0;
   }
