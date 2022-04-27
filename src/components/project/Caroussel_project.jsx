@@ -1,60 +1,70 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import ui from "../../assets/ui.png";
-import ui2 from "../../assets/ui2.jpg";
+import React, { useEffect, useState } from "react";
+import { Slide } from "react-slideshow-image";
+import axios from "axios";
 
 function Caroussel_project() {
+  const [projects, setProjects] = useState([]);
+
+  const getAllProjects = () => {
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/projects`)
+      .then((resp) => {
+        console.log(resp.data);
+        return setProjects(resp.data);
+      });
+  };
+
+  useEffect(() => {
+    getAllProjects();
+  }, []);
+
   return (
-    <div className="caroussel_project">
-      <section className="elements_project">
-        <h3>TITRE TEST</h3>
+    <>
+      <div className="caroussel_project">
+        <div className="slide-container_project">
+          <Slide>
+            {projects.map((project, index) => (
+              <div className="each-slide">
+                <section className="elements_project">
+                  <h5>{project.title}</h5>
 
-        <span className="circle" id="circle_project" />
+                  <span className="circle" id="circle_project" />
 
-        <hr className="line_project" />
-      </section>
+                  <hr className="line_project" />
+                </section>
 
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>
-          <img src={ui2} alt="image_projet" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={ui} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={ui2} alt="" />
-        </SwiperSlide>
-      </Swiper>
+                <div
+                  className="slide_container_project_img"
+                  style={{
+                    backgroundImage: `url(${process.env.REACT_APP_BACKEND_URL}/${project.assets[0].source})`,
+                  }}
+                  key={index}
+                ></div>
+                <div className="title_description_project">
+                  <h5>URL</h5>
+                  <p>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.link}
+                    </a>
+                  </p>
+                </div>
 
-      <div className="title_description_project">
-        <h4>URL</h4>
-        <p>
-          <a
-            href="https://www.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TITRE TEST
-          </a>
-        </p>
+                <div className="infos_description_project">
+                  <h5>DESCRIPTION</h5>
+                  <p className="description_project">
+                    {project.description}
+                  </p>{" "}
+                </div>
+              </div>
+            ))}
+          </Slide>
+        </div>
       </div>
-
-      <div className="infos_description_project">
-        <h4>DESCRIPTION</h4>
-        <p className="description_project">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vel
-          incidunt eos harum ratione beatae quos, aut quis ipsam temporibus
-          sapiente voluptas placeat quaerat velit earum quam exercitationem,
-          voluptates voluptatum eaque consectetur et nisi at asperiores unde.
-          Odit, velit officiis. Ea iure dolorem beatae aut id cumque molestias
-          at deleniti rerum quidem, repellat sunt ullam sed earum nam facere
-          alias autem ab delectus?
-        </p>{" "}
-      </div>
-    </div>
+    </>
   );
 }
 

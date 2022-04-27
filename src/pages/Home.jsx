@@ -9,11 +9,13 @@ import Me from "../components/home/Me";
 import TitleDescription from "../components/home/Title_description";
 import TitleProject from "../components/home/Title_project";
 import Skills from "../components/home/Skills";
+import Navigation from "../components/navigation/Navigation";
 
 function Home() {
   return (
     <div className="home">
       <Header />
+      <Navigation />
       <TitleDescription />
       <DescriptionHome />
       <CvBttn />
