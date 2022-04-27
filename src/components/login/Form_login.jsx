@@ -9,14 +9,14 @@ function Form_login() {
 
         <form className="login_form" onSubmit="">
           <div className="block_login">
-            <h5>IDENTIFIANT :</h5>
+            <h4>IDENTIFIANT :</h4>
             <label htmlFor="mail">
               <input type="email" placeholder="MAIL" value="" onChange="" />
             </label>
           </div>
 
           <div className="block_login">
-            <h5>MOT DE PASSE :</h5>
+            <h4>MOT DE PASSE :</h4>
             <label htmlFor="password">
               <input
                 type="password"

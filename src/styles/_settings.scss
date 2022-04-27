@@ -27,6 +27,15 @@ body {
   background: url(../../src/assets/back.png);
 }
 
+li {
+  font-family: $font-1;
+  font-size: 1.2em;
+}
+
+svg {
+  // display: none;
+}
+
 h1 {
   font-family: $font-1;
   display: flex;
@@ -43,6 +52,7 @@ h2 {
   color: $color-1;
   font-size: 1.5em;
   text-decoration: 5px underline #29f3c3;
+  filter: drop-shadow(0px 0px 3px #29f3c3);
 }
 
 h3 {
@@ -51,30 +61,25 @@ h3 {
   justify-content: flex-end;
   color: $color-1;
   font-size: 1.1em;
+  filter: drop-shadow(0px 0px 3px #29f3c3);
 }
 
 h4 {
   font-family: $font-1;
   color: $color-1;
   font-size: 1em;
-  text-decoration: 2px underline $color-2;
 }
 
 h5 {
   font-family: $font-1;
   color: $color-1;
   font-size: 0.9em;
-  text-decoration: 2px underline $color-2;
-}
-
-article {
-  font-family: $font-2;
-  color: $color-1;
+  filter: drop-shadow(0px 0px 3px #29f3c3);
 }
 
 p {
   color: $color-1;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family: $font-2;
   text-align: center;
 }
@@ -107,6 +112,10 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
+  li {
+    font-size: 1.5em;
+  }
+
   h1 {
     font-size: 3em;
   }
@@ -120,10 +129,13 @@ hr {
   }
 
   h4 {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 
-  h5,
+  h5 {
+    font-size: 1.2em;
+  }
+
   p {
     font-size: 1em;
   }
@@ -131,6 +143,10 @@ hr {
 }
 
 @media screen and (min-width: 1024px) {
+  li {
+    font-size: 1.6em;
+  }
+
   h1 {
     font-size: 4em;
   }
@@ -143,15 +159,12 @@ hr {
     font-size: 1.8em;
   }
 
-  h4 {
+  h4,
+  h5 {
     font-size: 1.4em;
   }
 
   p {
-    font-size: 1.2em;
-  }
-
-  h5 {
     font-size: 1.1em;
   }
 }
@@ -160,24 +173,20 @@ hr {
 
 
 @media screen and (min-width: 1440px) {
-  h1 {
-    font-size: 5em;
+  li {
+    font-size: 1.7em;
   }
 
-  h2 {
-    font-size: 3em;
+  h1 {
+    font-size: 5em;
   }
 
   h3 {
     font-size: 2em;
   }
 
-  h4 {
-    font-size: 1.7em;
-  }
-
   h5 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   p {

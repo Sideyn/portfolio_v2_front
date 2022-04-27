@@ -1,7 +1,7 @@
 .tab_skills {
- display: flex;
- justify-content: center;
- margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
 }
 
 .t1 {
@@ -19,13 +19,13 @@ td {
 }
 
 table {
-  animation: flicker 2s infinite alternate; 
+  animation: flicker 2s infinite alternate;
 }
 
 td,
 th {
   box-shadow: 0px 0px 3px 1px #29f3c3;
-  border: solid 1px $color-2;  
+  border: solid 1px $color-2;
 }
 
 th {
@@ -33,14 +33,14 @@ th {
   text-decoration: underline;
 }
 
- td  {
+td {
   font-size: 0.8em;
 }
 
 .content_td {
-display: flex;
-align-items: center;
-justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .icons_dev {
@@ -52,71 +52,74 @@ justify-content: space-around;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  filter: drop-shadow(0px 0px 5px #29f3c3); 
+  filter: drop-shadow(0px 0px 5px #29f3c3);
 }
 
 @keyframes flicker {
-    
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {     
-      box-shadow:
-          0 0 .1rem #fff,
-          inset 0 0 .1rem #fff,
-          0 0 1rem #29f3c3,
-          inset 0 0 1rem #29f3c3 ,
-          0 0 0.5rem #fff,
-          inset 0 0 1rem #29f3c3;        
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    box-shadow:
+      0 0 .1rem #fff,
+      inset 0 0 .1rem #fff,
+      0 0 1rem #29f3c3,
+      inset 0 0 1rem #29f3c3,
+      0 0 0.5rem #fff,
+      inset 0 0 1rem #29f3c3;
   }
-  
-  20%, 24%, 55% {        
-      box-shadow: none;
-  }    
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
 }
 
 
-@media screen and (min-width: 768px) {     
-   table,
-   th,
-   tr,
-   td {    
-     padding: 25px 40px;
-   } 
+@media screen and (min-width: 768px) {
 
-   th {
-     font-size: 1.2em;     
-   }
-   
-    td  {
-     font-size: 1em;
-   }  
-   
-   .icons_dev {
-     width: 30px;
-   } 
-}
-
-@media screen and (min-width: 1024px) {
   table,
   th,
   tr,
-  td {    
-    padding: 25px 100px;
-  } 
+  td {
+    padding: 25px 40px;
+  }
 
   th {
-    font-size: 1.4em;     
-  }
-  
-   td  {
     font-size: 1.2em;
-  }  
-  
+  }
+
+  td {
+    font-size: 1em;
+  }
+
+  .icons_dev {
+    width: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  table,
+  th,
+  tr,
+  td {
+    padding: 25px 80px;
+  }
+
   .icons_dev {
     width: 35px;
-  }  
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .icons_dev {
     width: 40px;
-  }  
+  }
 }

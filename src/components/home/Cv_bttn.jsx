@@ -11,12 +11,12 @@ function Cv_bttn() {
         >
           CV
         </a>
-        <span class="line-1"></span>
-        <span class="line-2"></span>
-        <span class="line-3"></span>
-        <span class="line-4"></span>
-        <span class="line-5"></span>
-        <span class="line-6"></span>
+        <span className="line-1"></span>
+        <span className="line-2"></span>
+        <span className="line-3"></span>
+        <span className="line-4"></span>
+        <span className="line-5"></span>
+        <span className="line-6"></span>
       </button>
     </>
   );

@@ -1,39 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
-// import tst from "../../assets/test.png";
-
-const slideImages = [
-  {
-    url: "https://i.ibb.co/6PMcHWK/test.png",
-  },
-  {
-    url: "https://i.ibb.co/6PMcHWK/test.png",
-  },
-  {
-    url: "https://i.ibb.co/3rD7r7G/test-1.png",
-  },
-];
+import axios from "axios";
 
 function Caroussel_home() {
+  const [assets, setAssets] = useState([]);
+
+  const getAllAssets = () => {
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/assets`)
+      .then((resp) => {
+        console.log(resp.data);
+        return setAssets(resp.data);
+      });
+  };
+
+  useEffect(() => {
+    getAllAssets();
+  }, []);
+
   return (
     <div className="slide-container_home">
-      <div className="light">
-        <Slide>
-          {slideImages.map((slideImage, index) => (
-            <NavLink exact="true" to="/project">
-              <div className="each-slide" key={index}>
-                <div
-                  className="slide_container_home_img"
-                  style={{ backgroundImage: `url(${slideImage.url})` }}
-                >
-                  {/* <span>{slideImage.caption}</span> */}
-                </div>
-              </div>
-            </NavLink>
-          ))}
-        </Slide>
-      </div>
+      <Slide>
+        {assets.map((asset, index) => (
+          <NavLink exact="true" to="/project">
+            <div className="each-slide">
+              <div
+                className="slide_container_home_img"
+                style={{
+                  backgroundImage: `url(${process.env.REACT_APP_BACKEND_URL}/${asset.source})`,
+                }}
+                key={index}
+              ></div>
+            </div>
+          </NavLink>
+        ))}
+      </Slide>
     </div>
   );
 }
