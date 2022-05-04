@@ -1,17 +1,58 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import GlobalContext from "../../context/context";
 
 function Form_login() {
+  const { setAdminId, setAlert, setAlertMsg } = useContext(GlobalContext);
+  const navigate = useNavigate();
+  const [login, setLogin] = useState({
+    mail: "",
+    password: "",
+  });
+
+  const handleLoginSubmit = async (e) => {
+    e.preventDefault();
+    if (!login.mail) {
+      setAlertMsg("Entre ton email !");
+      setAlert(true);
+    } else if (!login.password) {
+      setAlertMsg("Entre ton mot de passe !");
+      setAlert(true);
+    } else {
+      try {
+        await axios
+          .post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, login, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            setAdminId(res.data.id);
+          })
+          .then(() => {
+            navigate("../admin", { replace: true });
+          });
+      } catch (err) {
+        setAlertMsg(`Erreur : ${err.response.data}`);
+        setAlert(true);
+      }
+    }
+  };
+
   return (
     <div className="form_log">
       <section className="login_container">
         <h2>CONNEXION</h2>
 
-        <form className="login_form" onSubmit="">
+        <form className="login_form" onSubmit={handleLoginSubmit}>
           <div className="block_login">
             <h4>IDENTIFIANT :</h4>
             <label htmlFor="mail">
-              <input type="email" placeholder="MAIL" value="" onChange="" />
+              <input
+                type="email"
+                placeholder="MAIL"
+                value={login.mail}
+                onChange={(e) => setLogin({ ...login, mail: e.target.value })}
+              />
             </label>
           </div>
 
@@ -21,19 +62,18 @@ function Form_login() {
               <input
                 type="password"
                 placeholder="MOT DE PASSE"
-                value=""
-                onChange=""
+                value={login.password}
+                onChange={(e) =>
+                  setLogin({ ...login, password: e.target.value })
+                }
               />
             </label>
           </div>
 
-          <div className="test">
-            {" "}
-            <NavLink exact="true" to="/admin">
-              <button type="submit" className="login_button">
-                CONNECTEZ-VOUS
-              </button>
-            </NavLink>
+          <div className="bttn_login_box">
+            <button type="submit" className="login_button">
+              CONNECTE-TOI
+            </button>
           </div>
         </form>
       </section>
