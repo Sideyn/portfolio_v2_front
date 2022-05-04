@@ -28,7 +28,6 @@
     width: 40vw;
     max-width: 300px;
     height: 45px;
-    // max-height: 050px;
     font-family: 'Orbitron', sans-serif;
     color: white;
     border-style: none;
@@ -38,23 +37,24 @@
     padding: 10px;
     box-sizing: border-box;
     font-size: 0.8em;
-&:focus {
-    outline: none;
-    border: 1px solid $color-2;
-}
+
+    &:focus {
+        outline: none;
+        border: 1px solid $color-2;
+    }
 }
 
 section .selectors {
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 section .add_assets {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 section .add_assets input {
@@ -73,7 +73,7 @@ section .buttons {
     display: flex;
     align-items: center;
     background-color: black;
-    background-image: radial-gradient( rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    background-image: radial-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
     border-radius: 50px;
     color: white;
     height: 30px;
@@ -83,19 +83,19 @@ section .buttons {
     padding: 8px;
 
     &:hover {
-        background-color: $color-2 ;
+        background-color: $color-2;
         box-shadow: 0px 0px 5px 1px $color-2;
         border-radius: 5px;
         border: none;
-     }
+    }
 }
 
 @media screen and (min-width: 768px) {
     .form_admin select {
         font-size: 1em;
-        
+
     }
-    
+
     .button_admin {
         font-size: 1em;
         padding: 20px;
@@ -105,9 +105,9 @@ section .buttons {
 @media screen and (min-width: 1024px) {
     .form_admin select {
         font-size: 1.2em;
-        
+
     }
-    
+
     .button_admin {
         font-size: 1.1em;
     }
@@ -115,7 +115,7 @@ section .buttons {
 
 @media screen and (min-width: 1440px) {
     section .add_assets {
-       margin-top: 30px;
-        
+        margin-top: 30px;
+
     }
 }
