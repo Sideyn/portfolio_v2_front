@@ -10,7 +10,7 @@ function Caroussel_home() {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/api/assets`)
       .then((resp) => {
-        console.log(resp.data);
+        // console.log(resp.data);
         return setAssets(resp.data);
       });
   };
@@ -22,15 +22,14 @@ function Caroussel_home() {
   return (
     <div className="slide-container_home">
       <Slide>
-        {assets.map((asset, index) => (
-          <NavLink exact="true" to="/project">
+        {assets.map((asset) => (
+          <NavLink exact="true" to="/project" key={asset.id}>
             <div className="each-slide">
               <div
                 className="slide_container_home_img"
                 style={{
                   backgroundImage: `url(${process.env.REACT_APP_BACKEND_URL}/${asset.source})`,
                 }}
-                key={index}
               ></div>
             </div>
           </NavLink>

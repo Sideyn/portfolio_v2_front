@@ -70,7 +70,8 @@ h4 {
   font-size: 1em;
 }
 
-h5 {
+h5,
+h6 {
   font-family: $font-1;
   color: $color-1;
   font-size: 0.9em;
@@ -136,6 +137,10 @@ hr {
     font-size: 1.2em;
   }
 
+  h6 {
+    font-size: 1em;
+  }
+
   p {
     font-size: 1em;
   }
@@ -164,6 +169,11 @@ hr {
     font-size: 1.4em;
   }
 
+
+  h6 {
+    font-size: 1.2em;
+  }
+
   p {
     font-size: 1.1em;
   }
@@ -187,6 +197,10 @@ hr {
 
   h5 {
     font-size: 1.5em;
+  }
+
+  h6 {
+    font-size: 1.3em;
   }
 
   p {

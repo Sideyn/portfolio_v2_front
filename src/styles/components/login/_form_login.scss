@@ -14,7 +14,7 @@
 
     &:hover {
         transition: box-shadow 0.5s;
-        box-shadow: inset 0px 0px 10px 2px #29f3c3;
+        box-shadow: inset 0px 0px 10px 2px $color-2;
 
     }
 }
@@ -66,8 +66,8 @@
     transition: 0.8s ease;
 
     &:hover {
-        background-color: #29f3c3;
-        box-shadow: 0px 0px 5px 1px #29f3c3;
+        background-color: $color-2;
+        box-shadow: 0px 0px 5px 1px $color-2;
         border-radius: 5px;
         border: none;
     }
@@ -82,7 +82,7 @@
 
     .login_button {
         font-size: 0.9em;
-        padding: 20px;
+        padding: 15px;
     }
 }
 
