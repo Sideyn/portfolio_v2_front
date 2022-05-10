@@ -7,28 +7,20 @@ import Admin from "./pages/Admin";
 import Project from "./pages/Project";
 
 function App() {
-  const { alert, adminId } = useContext(GlobalContext);
+  const { adminId } = useContext(GlobalContext);
 
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/login" element={<Login />} />
         {adminId ? (
           <Route path="/admin" element={<Admin />} />
         ) : (
-          <Route
-            path="admin"
-            element={
-              <h2>
-                Vous n&#39;avez pas accès à la partie administrateur, veuillez
-                vous connectez
-              </h2>
-            }
-          />
+          <Route path="/" />
         )}
-        <Route path="/login" element={<Login />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

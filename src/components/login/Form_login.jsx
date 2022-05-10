@@ -2,9 +2,11 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import GlobalContext from "../../context/context";
+import Alert from "../alert/Alert";
 
 function Form_login() {
-  const { setAdminId, setAlert, setAlertMsg } = useContext(GlobalContext);
+  const { alert, setAdminId, setAlert, setAlertMsg } =
+    useContext(GlobalContext);
   const navigate = useNavigate();
   const [login, setLogin] = useState({
     mail: "",
@@ -40,6 +42,7 @@ function Form_login() {
 
   return (
     <div className="form_log">
+      {alert ? <Alert /> : null}
       <section className="login_container">
         <h2>CONNEXION</h2>
 

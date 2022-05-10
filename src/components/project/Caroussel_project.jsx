@@ -24,7 +24,7 @@ function Caroussel_project() {
         <div className="slide-container_project">
           <Slide>
             {projects.map((project, index) => (
-              <div className="each-slide">
+              <div className="each-slide" key={project.id}>
                 <section className="elements_project">
                   <h5>{project.title}</h5>
 
@@ -38,7 +38,6 @@ function Caroussel_project() {
                   style={{
                     backgroundImage: `url(${process.env.REACT_APP_BACKEND_URL}/${project.assets[0].source})`,
                   }}
-                  key={index}
                 ></div>
                 <div className="title_description_project">
                   <h5>URL</h5>

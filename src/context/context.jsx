@@ -12,8 +12,11 @@ export const GlobalContextProvider = ({ children }) => {
   //   Le state pour l'ouverture des alertes et le message
   const [alert, setAlert] = useState(false);
   const [alertMsg, setAlertMsg] = useState(
-    "Un message d&#39;alerte doit s&#39;afficher"
+    "Un message d'alerte doit s'afficher"
   );
+
+  // Message de confirmation pour ajout ou suppression
+  const [status, setStatus] = useState("");
 
   //   La popup d'alerte pour suppression
   const [deleteAlert, setDeleteAlert] = useState(false);
@@ -35,6 +38,8 @@ export const GlobalContextProvider = ({ children }) => {
         setAdminId,
         alert,
         setAlert,
+        status,
+        setStatus,
         alertMsg,
         setAlertMsg,
         deleteAlert,
