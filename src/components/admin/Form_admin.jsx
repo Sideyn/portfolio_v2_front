@@ -1,55 +1,43 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import axios from "axios";
 import GlobalContext from "../../context/context";
 import FormProject from "./Form_project";
 import Alert from "../alert/Alert";
 import Status from "../status/Status";
+import DelAlert from "../alert/DelAlert";
 
 function Form_admin() {
   const {
-    adminId,
-    setAdminId,
+    setAdmin,
     alert,
     setAlert,
     status,
     setStatus,
-    alertMsg,
     setAlertMsg,
     deleteAlert,
     setDeleteAlert,
     actionType,
     setActionType,
+    projects,
+    setProjects,
+    assets,
+    setAssets,
     project,
     setProject,
+    submitType,
+    setSubmitType,
+    assetFile,
+    setAssetFile,
+    projectBox,
+    updateId,
+    setUpdateId,
+    deleteProject,
+    setDeleteProject,
   } = useContext(GlobalContext);
-
-  // State projet
-  const [projectBox, setProjectBox] = useState("projet");
-
-  // Gére le submit d'ajout d'une image
-  const [submitType, setSubmitType] = useState("");
-
-  // Avoir tout les admins
-  const [admin, setAdmin] = useState([]);
-
-  // Avoir tout les assets
-  const [assets, setAssets] = useState([]);
-
-  // Avoir tout les projets
-  const [projects, setProjects] = useState([]);
-
-  // Id du projet à modifier
-  const [updateId, setUpdateId] = useState([]);
-
-  // State upload image
-  const [assetFile, setAssetFile] = useState();
-
-  const [deleteProject, setDeleteProject] = useState();
 
   // Avoir l'admin
   const getAdmin = () => {
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/admin`).then((resp) => {
-      // console.log("admin", resp.data);
       return setAdmin(resp.data);
     });
   };
@@ -59,7 +47,6 @@ function Form_admin() {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/api/assets`)
       .then((resp) => {
-        // console.log("assets", resp.data);
         return setAssets(resp.data);
       });
   };
@@ -69,7 +56,6 @@ function Form_admin() {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/api/projects`)
       .then((resp) => {
-        // console.log("projects", resp.data);
         return setProjects(resp.data);
       });
   };
@@ -83,7 +69,7 @@ function Form_admin() {
   // Stock l'asset dans le state project
   const stockAssetProject = (id) => {
     if (projectBox === "projet") {
-      setProjectBox({ ...projects, assets_id: id });
+      setProject({ ...project, assets_id: id });
     } else {
       setAlertMsg("Erreur en enregistrant l'image");
       setAlert(true);
@@ -92,16 +78,15 @@ function Form_admin() {
 
   // Récupère le nouvel asset
   const handleNewAsset = (e) => {
-    // console.log(e.target.files[0]);
     const selectedAsset = e.target.files[0];
     const { type } = selectedAsset;
     if (type !== "image/png" && type !== "image/jpg" && type !== "image/jpeg") {
       setAssetFile();
-      setAlertMsg("Séléctionne une image .png, .jpeg ou .png");
+      setAlertMsg("Séléctionne une image .png, .jpg ou .jpeg");
       setAlert(true);
     } else {
       setAssetFile(e.target.files[0]);
-      // console.log(assetFile);
+      console.log(assetFile);
     }
   };
 
@@ -112,7 +97,7 @@ function Form_admin() {
     // on y ajoute le nouveau fichier asset
     data.append("asset", assetFile);
     // on l'envoie au back avec axios
-    const type = assetFile.type === "image";
+    const type = assetFile.type;
     try {
       await axios
         .post(
@@ -123,8 +108,6 @@ function Form_admin() {
           }
         )
         .then(() => {
-          // console.log(resp);
-          // on actualise la liste d'admin avec le nouveau
           getAllAssets();
           setStatus("Nouvel asset créé");
         });
@@ -133,7 +116,7 @@ function Form_admin() {
     }
   };
 
-  // Créer le projet
+  // Créer, modifier ou supprimer le projet
   const handleProjectSubmit = async () => {
     // console.log("project", project);
     // Si l'action ajouter est sélectionné on fait un post
@@ -164,7 +147,7 @@ function Form_admin() {
       }
       // Si l'action sélctionné est modifier on fait un put
     } else if (actionType === "modifier") {
-      setProject({ ...project, assets_id: "" });
+      // setProject({ ...project, assets_id: "" });
       try {
         await axios
           .put(
@@ -182,24 +165,23 @@ function Form_admin() {
       }
       // Si l'action sélectionné est supprimer on fait un delete
     } else if (actionType === "supprimer") {
-      setProject({ ...project, assets_id: "" });
       try {
         await axios
           .delete(
             `${process.env.REACT_APP_BACKEND_URL}/api/projects/${deleteProject}`,
-            project,
             {
               withCredentials: true,
             }
           )
           .then(() => {
+            setDeleteAlert(false);
             setStatus("Projet supprimé");
           });
       } catch (err) {
         setStatus("Erreur lors de la suppression du  projet");
       }
     } else {
-      setAlertMsg("Clique sur ajouter");
+      setAlertMsg("Clique sur télécharger");
       setAlert(true);
     }
   };
@@ -225,6 +207,7 @@ function Form_admin() {
     <div className="form_adm">
       {alert ? <Alert /> : null}
       {status ? <Status /> : null}
+      {deleteAlert ? <DelAlert /> : null}
 
       <section className="admin_container">
         <h2>ADMINISTRATEUR</h2>
@@ -266,7 +249,7 @@ function Form_admin() {
               <label htmlFor="select_update">
                 <select
                   name="delete"
-                  onChange={() => setDeleteProject(project.id)}
+                  onChange={(e) => setDeleteProject(e.target.value)}
                 >
                   <option>Choisis un projet à supprimer</option>
                   {projects.map((projectDel) => (
@@ -320,15 +303,29 @@ function Form_admin() {
               </button>
             ) : null}
 
-            <button
-              type="submit"
-              className="button_admin"
-              onClick={() => {
-                setSubmitType("form");
-              }}
-            >
-              VALIDER
-            </button>
+            {actionType === "modifier" || actionType === "ajouter" ? (
+              <button
+                type="submit"
+                className="button_admin"
+                onClick={() => {
+                  setSubmitType("form");
+                }}
+              >
+                VALIDER
+              </button>
+            ) : null}
+
+            {actionType === "supprimer" ? (
+              <button
+                type="button"
+                className="button_admin"
+                onClick={() => {
+                  setDeleteAlert(true);
+                }}
+              >
+                VALIDER
+              </button>
+            ) : null}
           </div>
         </form>
       </section>

@@ -7,15 +7,8 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 50;
-    background-image: url(../../../assets/door.jpg);
     background-position: center;
-    animation: breathe 3s infinite;
-
-    @keyframes breathe {
-        50% {
-            box-shadow: 0px 0px 15px orangered;
-        }
-    }
+    background: rgba(30, 30, 30, 0.314);
 }
 
 
@@ -27,20 +20,20 @@
     text-align: center;
     width: 350px;
     height: 250px;
-    background: rgba(0, 0, 0, 0.69);
+    background: url(../../../assets/back.png);
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
     margin: 150px auto;
-
+    box-shadow: inset 0px 0px 4px 2px $color-2;
+    transition: 0.5s ease;
 
     &:hover {
-        transition: box-shadow 0.8s;
-        box-shadow: inset 0px 0px 10px 2px $color-2;
+        box-shadow: inset 0px 0px 12px 2px $color-2;
     }
 }
 
-.cancel_button {
+.button_alert {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,14 +65,14 @@
         height: 300px;
     }
 
-    .cancel_button {
+    .button_alert {
         padding: 15px;
         font-size: 0.9em;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .cancel_button {
+    .button_alert {
         font-size: 1em;
     }
 
@@ -90,7 +83,7 @@
 
 
 @media screen and (min-width: 1440px) {
-    .cancel_button {
+    .button_alert {
         font-size: 1.1em;
     }
 
