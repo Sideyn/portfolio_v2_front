@@ -11,8 +11,8 @@ function Status() {
       <section className="alert_box">
         <h6>{status}</h6>
 
-        <button type="button" className="cancel_button" onClick={handleAlert}>
-          ANNULER
+        <button type="button" className="button_alert" onClick={handleAlert}>
+          RETOUR
         </button>
       </section>
     </div>
