@@ -1,0 +1,56 @@
+.navigation {
+    ul {
+        display: flex;
+        justify-content: center;
+        margin: 30px 30px 20px 30px;
+
+        a {
+            text-decoration: none;
+            padding: 10px;
+
+            li {
+                color: $color-1;
+                transition: 0.4s;
+                cursor: pointer;
+                filter: drop-shadow(0px 0px 3px #29f3c3);
+
+                &:hover {
+                    color: $color-2;
+                }
+            }
+        }
+
+        .nav-active {
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 4px;
+                width: 0;
+                background: $color-2;
+                position: absolute;
+                border-radius: 10px;
+                bottom: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-animation: anim 0.3s ease forwards;
+                animation: anim 0.6s ease forwards;
+                color: $color-2;
+                filter: drop-shadow(0px 0px 3px #29f3c3);
+
+                @-webkit-keyframes anim {
+                    to {
+                        width: 90%;
+                    }
+                }
+
+                @keyframes anim {
+                    to {
+                        width: 90%;
+                    }
+                }
+
+            }
+        }
+    }
+}

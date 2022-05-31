@@ -1,0 +1,183 @@
+.slide-container_home {
+  border-top: 5px solid $color-2;
+  border-bottom: 5px solid $color-2;
+  box-shadow: 0px 0px 10px 2px #29f3c3;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.slide_container_home_img {
+  height: 80vh;
+  max-height: 300px;
+  background-color: rgba(255, 255, 255, 0.11);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.react-slideshow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.react-slideshow-container .nav {
+  z-index: 10;
+}
+
+.react-slideshow-container .default-nav {
+  height: 30px;
+  background: transparent;
+  width: 30px;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.react-slideshow-container .default-nav:hover,
+.react-slideshow-container .default-nav:focus {
+  outline: 0;
+}
+
+.react-slideshow-container .default-nav.disabled:hover {
+  cursor: not-allowed;
+}
+
+.react-slideshow-container .default-nav:first-of-type {
+  margin-right: -30px;
+  border-right: 0;
+  border-top: 0;
+}
+
+.react-slideshow-container .default-nav:last-of-type {
+  margin-left: -30px;
+}
+
+.react-slideshow-container+ul.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.react-slideshow-container+ul.indicators li {
+  display: inline-block;
+  position: relative;
+  width: 7px;
+  height: 7px;
+  padding: 5px;
+  margin: 0;
+}
+
+.react-slideshow-container+ul.indicators .each-slideshow-indicator {
+  border: 0;
+  opacity: 0.25;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+}
+
+.react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  content: "";
+  background: #000;
+  text-align: center;
+}
+
+.react-slideshow-container+ul.indicators .each-slideshow-indicator:hover,
+.react-slideshow-container+ul.indicators .each-slideshow-indicator.active,
+.react-slideshow-container+ul.indicators .each-slideshow-indicator:focus {
+  opacity: 0.75;
+  outline: 0;
+}
+
+.react-slideshow-fade-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap>div {
+  position: relative;
+  opacity: 0;
+}
+
+.react-slideshow-wrapper.slide {
+  width: 100%;
+  overflow: hidden;
+}
+
+.react-slideshow-wrapper .images-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.react-slideshow-zoom-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.react-slideshow-zoom-wrapper .zoom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.react-slideshow-zoom-wrapper .zoom-wrapper>div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 764px) {
+  .slide_container_home_img {
+    max-height: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slide-container_home {
+    padding: 15px;
+  }
+
+  .slide_container_home_img {
+    max-height: 600px;
+  }
+}
