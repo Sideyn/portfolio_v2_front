@@ -14,12 +14,12 @@ function App() {
       <Routes>
         <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/projet" element={<Project />} />
+        <Route path="/connexion" element={<Login />} />
         {adminId ? (
           <Route path="/admin" element={<Admin />} />
         ) : (
-          <Route path="/" />
+          <Route path="/accueil" />
         )}
       </Routes>
     </BrowserRouter>

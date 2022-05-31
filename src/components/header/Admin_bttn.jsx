@@ -7,7 +7,7 @@ function Admin_bttn() {
   return (
     <div className="adminBttn">
       {adminId ? null : (
-        <NavLink exact="true" to="/login" className="admin_bttn">
+        <NavLink exact="true" to="/connexion" className="admin_bttn">
           LOGIN
         </NavLink>
       )}
