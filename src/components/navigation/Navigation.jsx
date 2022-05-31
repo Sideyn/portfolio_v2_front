@@ -9,7 +9,7 @@ function Navigation() {
           <li>Accueil</li>
         </NavLink>
         <NavLink
-          to="/project"
+          to="/projet"
           className={(nav) => (nav.isActive ? "nav-active" : "")}
         >
           <li>Projets</li>
