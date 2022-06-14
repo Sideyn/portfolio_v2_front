@@ -49,6 +49,64 @@ section .selectors {
 
 }
 
+.form_proj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fields input {
+    width: 70vw;
+    max-width: 750px;
+    height: 50px;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    border-style: none;
+    background-color: black;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+}
+
+section .fields {
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    max-width: 800px;
+}
+
+.form_proj input:focus {
+    outline: none;
+    border: 1px solid $color-2;
+}
+
+.form_proj textarea {
+    width: 70vw;
+    max-width: 750px;
+    height: 40vh;
+    max-height: 200px;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    border-style: none;
+    background-color: black;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+}
+
+.form_proj textarea:focus {
+    outline: none;
+    border: 1px solid $color-2;
+}
+
 section .add_assets {
     display: flex;
     justify-content: space-between;
@@ -90,6 +148,12 @@ section .buttons {
 }
 
 @media screen and (min-width: 768px) {
+
+    .fields input,
+    .form_proj textarea {
+        font-size: 0.9em;
+    }
+
     .form_admin select {
         font-size: 1em;
 
@@ -104,7 +168,11 @@ section .buttons {
 @media screen and (min-width: 1024px) {
     .form_admin select {
         font-size: 1.2em;
+    }
 
+    .fields input,
+    .form_proj textarea {
+        font-size: 1em;
     }
 
     .button_admin {
@@ -113,6 +181,12 @@ section .buttons {
 }
 
 @media screen and (min-width: 1440px) {
+
+    .fields input,
+    .form_proj textarea {
+        margin-top: 30px;
+    }
+
     section .add_assets {
         margin-top: 30px;
 
