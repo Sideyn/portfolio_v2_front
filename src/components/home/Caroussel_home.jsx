@@ -23,7 +23,7 @@ function Caroussel_home() {
     <div className="slide-container_home">
       <Slide>
         {assets.map((asset) => (
-          <NavLink exact="true" to="/project" key={asset.id}>
+          <NavLink exact="true" to="/projet" key={asset.id}>
             <div className="each-slide">
               <div
                 className="slide_container_home_img"

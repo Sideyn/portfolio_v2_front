@@ -5,7 +5,10 @@ function Navigation() {
   return (
     <div className="navigation">
       <ul>
-        <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+        <NavLink
+          to="/accueil"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>Accueil</li>
         </NavLink>
         <NavLink
@@ -13,6 +16,12 @@ function Navigation() {
           className={(nav) => (nav.isActive ? "nav-active" : "")}
         >
           <li>Projets</li>
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
+          <li>Contact</li>
         </NavLink>
       </ul>
     </div>

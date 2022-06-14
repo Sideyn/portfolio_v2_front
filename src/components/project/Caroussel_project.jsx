@@ -39,17 +39,17 @@ function Caroussel_project() {
                     backgroundImage: `url(${process.env.REACT_APP_BACKEND_URL}/${project.assets[0].source})`,
                   }}
                 ></div>
+
                 <div className="title_description_project">
                   <h5>URL</h5>
-                  <p>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {project.link}
-                    </a>
-                  </p>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <p>{project.link}</p>
+                  </a>
                 </div>
 
                 <div className="infos_description_project">

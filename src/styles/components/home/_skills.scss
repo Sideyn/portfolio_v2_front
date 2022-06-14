@@ -29,12 +29,12 @@ th {
 }
 
 th {
-  font-size: 1em;
+  font-size: 0.7em;
   text-decoration: underline;
 }
 
 td {
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 .content_td {
@@ -92,11 +92,11 @@ td {
   }
 
   th {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   td {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   .icons_dev {
@@ -110,16 +110,10 @@ td {
   th,
   tr,
   td {
-    padding: 25px 80px;
+    padding: 20px 60px;
   }
 
   .icons_dev {
     width: 35px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .icons_dev {
-    width: 40px;
   }
 }
