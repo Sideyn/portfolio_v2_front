@@ -67,15 +67,10 @@
 
     .button_alert {
         padding: 15px;
-        font-size: 0.9em;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .button_alert {
-        font-size: 1em;
-    }
-
     .alert_box {
         width: 500px;
     }
@@ -83,10 +78,6 @@
 
 
 @media screen and (min-width: 1440px) {
-    .button_alert {
-        font-size: 1.1em;
-    }
-
     .alert_box {
         width: 600px;
     }

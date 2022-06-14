@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 function Main_title_home() {
   return (
     <div className="titleHome">
-      <h1 className="glitch">
+      <div className="glitch">
         <NavLink exact="true" to="/">
-          PORTFOLIO
+          <h1>PORTFOLIO</h1>
         </NavLink>
-      </h1>
+      </div>
 
       <hr className="hr_home" />
     </div>

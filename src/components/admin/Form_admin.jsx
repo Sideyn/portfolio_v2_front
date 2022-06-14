@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from "react";
 import axios from "axios";
 import GlobalContext from "../../context/context";
-import Alert from "../alert/Alert";
-import Status from "../status/Status";
-import DelAlert from "../alert/DelAlert";
+import Alert from "../../components/alert/Alert";
+import Status from "../../components/status/Status";
+import DelAlert from "../../components/alert/DelAlert";
 
 function Form_admin() {
   const {
@@ -238,7 +238,7 @@ function Form_admin() {
                 <label htmlFor="title">
                   <input
                     type="text"
-                    placeholder="TITRE"
+                    placeholder="Titre"
                     value={project.title}
                     onChange={(e) =>
                       setProject({ ...project, title: e.target.value })
@@ -249,7 +249,7 @@ function Form_admin() {
                 <label htmlFor="link">
                   <input
                     type="text"
-                    placeholder="LIEN"
+                    placeholder="Lien"
                     value={project.link}
                     onChange={(e) =>
                       setProject({ ...project, link: e.target.value })
@@ -260,7 +260,7 @@ function Form_admin() {
                 <label htmlFor="description">
                   <textarea
                     name="description"
-                    placeholder="DESCRIPTION"
+                    placeholder="Description"
                     value={project.description}
                     onChange={(e) =>
                       setProject({ ...project, description: e.target.value })
