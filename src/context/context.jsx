@@ -9,7 +9,7 @@ export const GlobalContextProvider = ({ children }) => {
   // je crée le state qui recupère l'admin ID si elle existe et on le passe a tous les composants qui ont un accès admin
   const [adminId, setAdminId] = useState();
 
-  // Avoir tout les admins
+  // Avoir l'admin
   const [admin, setAdmin] = useState([]);
 
   //   Le state pour l'ouverture des alertes et le message

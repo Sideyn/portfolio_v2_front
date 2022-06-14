@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import axios from "axios";
 import GlobalContext from "../../context/context";
-import FormProject from "./Form_project";
 import Alert from "../alert/Alert";
 import Status from "../status/Status";
 import DelAlert from "../alert/DelAlert";
@@ -31,7 +30,6 @@ function Form_admin() {
     projectBox,
     updateId,
     setUpdateId,
-    deleteProject,
     setDeleteProject,
   } = useContext(GlobalContext);
 
@@ -85,8 +83,7 @@ function Form_admin() {
       setAlertMsg("Séléctionne une image .png, .jpg ou .jpeg");
       setAlert(true);
     } else {
-      setAssetFile(e.target.files[0]);
-      console.log(assetFile);
+      setAssetFile(selectedAsset);
     }
   };
 
@@ -97,19 +94,14 @@ function Form_admin() {
     // on y ajoute le nouveau fichier asset
     data.append("asset", assetFile);
     // on l'envoie au back avec axios
-    const type = assetFile.type;
     try {
       await axios
-        .post(
-          `${process.env.REACT_APP_BACKEND_URL}/api/assets/upload?type=${type}`,
-          data,
-          {
-            withCredentials: true,
-          }
-        )
+        .post(`${process.env.REACT_APP_BACKEND_URL}/api/assets/upload`, data, {
+          withCredentials: true,
+        })
         .then(() => {
           getAllAssets();
-          setStatus("Nouvel asset créé");
+          setStatus("Nouvelle image créée");
         });
     } catch (err) {
       setStatus(`Erreur : ${err.response.data}`);
@@ -118,12 +110,9 @@ function Form_admin() {
 
   // Créer, modifier ou supprimer le projet
   const handleProjectSubmit = async () => {
-    // console.log("project", project);
-    // Si l'action ajouter est sélectionné on fait un post
     if (actionType === "ajouter") {
-      // Je vérifie que mes champs obligatoirse sont bien remplis
       if (!project.title || !project.link || !project.description) {
-        setAlertMsg("Veuillez remplir les champs correctement");
+        setAlertMsg("Remplis tous les champs correctement");
         setAlert(true);
       } else {
         try {
@@ -145,9 +134,7 @@ function Form_admin() {
           setStatus("Erreur lors de la création du projet");
         }
       }
-      // Si l'action sélctionné est modifier on fait un put
     } else if (actionType === "modifier") {
-      // setProject({ ...project, assets_id: "" });
       try {
         await axios
           .put(
@@ -163,23 +150,6 @@ function Form_admin() {
       } catch (err) {
         setStatus("Erreur lors de la modification du  projet");
       }
-      // Si l'action sélectionné est supprimer on fait un delete
-    } else if (actionType === "supprimer") {
-      try {
-        await axios
-          .delete(
-            `${process.env.REACT_APP_BACKEND_URL}/api/projects/${deleteProject}`,
-            {
-              withCredentials: true,
-            }
-          )
-          .then(() => {
-            setDeleteAlert(false);
-            setStatus("Projet supprimé");
-          });
-      } catch (err) {
-        setStatus("Erreur lors de la suppression du  projet");
-      }
     } else {
       setAlertMsg("Clique sur télécharger");
       setAlert(true);
@@ -192,7 +162,7 @@ function Form_admin() {
       if (projectBox === "projet") {
         handleProjectSubmit();
       } else {
-        setAlertMsg("L'élément à modifier n'est pas bien renseigné");
+        setAlertMsg("Le projet à modifier n'est pas bien renseigné");
         setAlert(true);
       }
     } else if (submitType === "asset") {
@@ -246,7 +216,7 @@ function Form_admin() {
             ) : null}
 
             {actionType === "supprimer" ? (
-              <label htmlFor="select_update">
+              <label htmlFor="select_delete">
                 <select
                   name="delete"
                   onChange={(e) => setDeleteProject(e.target.value)}
@@ -263,7 +233,42 @@ function Form_admin() {
           </section>
 
           {actionType === "ajouter" || actionType === "modifier" ? (
-            <FormProject />
+            <section className="form_proj">
+              <div className="fields">
+                <label htmlFor="title">
+                  <input
+                    type="text"
+                    placeholder="TITRE"
+                    value={project.title}
+                    onChange={(e) =>
+                      setProject({ ...project, title: e.target.value })
+                    }
+                  />
+                </label>
+
+                <label htmlFor="link">
+                  <input
+                    type="text"
+                    placeholder="LIEN"
+                    value={project.link}
+                    onChange={(e) =>
+                      setProject({ ...project, link: e.target.value })
+                    }
+                  />
+                </label>
+
+                <label htmlFor="description">
+                  <textarea
+                    name="description"
+                    placeholder="DESCRIPTION"
+                    value={project.description}
+                    onChange={(e) =>
+                      setProject({ ...project, description: e.target.value })
+                    }
+                  ></textarea>
+                </label>
+              </div>
+            </section>
           ) : null}
 
           {actionType === "modifier" || actionType === "ajouter" ? (
@@ -276,7 +281,7 @@ function Form_admin() {
                 />
               </label>
 
-              <label htmlFor="select_asset">
+              <label htmlFor="stock_asset">
                 <select
                   name="asset"
                   onChange={(e) => stockAssetProject(e.target.value)}
@@ -292,7 +297,7 @@ function Form_admin() {
             </section>
           ) : null}
 
-          <div className="buttons">
+          <section className="buttons">
             {actionType === "modifier" || actionType === "ajouter" ? (
               <button
                 className="button_admin"
@@ -326,7 +331,7 @@ function Form_admin() {
                 VALIDER
               </button>
             ) : null}
-          </div>
+          </section>
         </form>
       </section>
     </div>
