@@ -1,7 +1,3 @@
-.slide-container_project {
-  padding: 10px;
-}
-
 .slide_container_project_img {
   height: 100vh;
   max-height: 300px;
@@ -72,7 +68,7 @@
 .infos_description_project {
   border: 1px solid $color-2;
   background: rgba(255, 255, 255, 0.11);
-  margin: 15px;
+  margin: 25px;
   padding: 10px;
   border-radius: 5px;
 }
@@ -116,6 +112,7 @@
     background: rgba(255, 255, 255, 0.459);
     width: 30px;
     transition: 0.6s ease;
+    margin-top: 150px;
   }
 
   .react-slideshow-container .default-nav:hover,
@@ -129,10 +126,6 @@
     margin-top: 45px;
   }
 
-  .slide-container_project {
-    padding: 15px;
-  }
-
   .slide_container_project_img {
     max-height: 600px;
     margin-bottom: 50px;
@@ -144,19 +137,37 @@
 
   .title_description_project,
   .infos_description_project {
-    margin: 40px;
+    margin-top: 50px;
   }
 }
 
-@media screen and (min-width: 1440px) {
-
-  .slide_container_project_img {
-    margin-bottom: 100px;
+@media screen and (min-width: 1117px) {
+  .react-slideshow-container .default-nav {
+    margin-top: 170px;
   }
+}
 
-  .title_description_project,
-  .infos_description_project {
-    margin: 50px;
-    padding: 25px;
+@media screen and (min-width: 1206px) {
+  .react-slideshow-container .default-nav {
+    margin-top: 190px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .react-slideshow-container .default-nav {
+    margin-top: 230px;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .react-slideshow-container .default-nav {
+    margin-top: 250px;
+  }
+}
+
+@media screen and (min-width: 1684px) {
+  .react-slideshow-container .default-nav {
+    margin-top: 280px;
   }
 }
