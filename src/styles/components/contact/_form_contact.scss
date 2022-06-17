@@ -1,11 +1,11 @@
-.form_adm {
+.Form_cont {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
-.admin_container {
+.contact_container {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -18,41 +18,16 @@
     }
 }
 
-.form_admin {
+.form_contact {
     width: 85vw;
     margin-top: 20px;
 }
 
-.form_admin select {
-    width: 40vw;
-    max-width: 300px;
-    height: 45px;
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    border-style: none;
-    background-color: black;
-    transition: 0.5s ease;
-    margin-top: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 0.8em;
-
-    &:focus {
-        outline: none;
-        border: 1px solid $color-2;
-    }
-}
-
-section .selectors {
-    display: flex;
-    justify-content: space-around;
-
-}
-
-.form_proj {
+.contact_section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     input:focus {
         outline: none;
@@ -71,7 +46,7 @@ section .selectors {
         margin-top: 20px;
         padding: 10px;
         box-sizing: border-box;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     :focus {
@@ -80,13 +55,14 @@ section .selectors {
     }
 }
 
-.fields {
+
+.fields_contact {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.fields input {
+.fields_contact input {
     width: 70vw;
     max-width: 750px;
     height: 50px;
@@ -97,7 +73,7 @@ section .selectors {
     margin-top: 20px;
     padding: 10px;
     box-sizing: border-box;
-    font-size: 0.7em;
+    font-size: 0.8em;
 
 
     section {
@@ -107,25 +83,7 @@ section .selectors {
     }
 }
 
-section .add_assets {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    input {
-        width: 100%;
-    }
-}
-
-section .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.button_admin {
+.button_contact {
     display: flex;
     align-items: center;
     background-color: black;
@@ -149,26 +107,37 @@ section .buttons {
 
 @media screen and (min-width: 768px) {
 
-    .fields input,
-    .form_proj textarea {
-        font-size: 0.8em;
-    }
-
-    .form_admin select {
+    .fields_contact input,
+    .contact_container textarea {
         font-size: 0.9em;
+    }
+
+    .form_contact select {
+        font-size: 1em;
 
     }
 
-    .button_admin {
+    .button_contact {
         height: 40px;
-        padding: 20px;
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .form_contact select {
+        font-size: 1.2em;
+    }
+
+    .fields_contact input,
+    .contact_container textarea {
+        font-size: 1em;
     }
 }
 
 @media screen and (min-width: 1440px) {
 
-    .fields input,
-    .form_proj textarea {
+    .fields_contact input,
+    .contact_container textarea {
         margin-top: 30px;
     }
 

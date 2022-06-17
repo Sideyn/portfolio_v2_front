@@ -75,7 +75,7 @@ function Form_login() {
 
           <div className="bttn_login_box">
             <button type="submit" className="login_button">
-              CONNECTE-TOI
+              CONNEXION
             </button>
           </div>
         </form>

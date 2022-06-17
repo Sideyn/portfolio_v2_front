@@ -7,7 +7,7 @@ function Skills() {
         <table className="t1">
           <thead>
             <tr>
-              <th colSpan="2">MES OUTILS</th>
+              <th colSpan="2">ENVIRONNEMENT DE TRAVAIL</th>
             </tr>
           </thead>
 
@@ -76,7 +76,7 @@ function Skills() {
               </td>
               <td>
                 <div className="content_td">
-                  GIT/GITHUB
+                  GIT <br /> GITHUB
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                     alt="icones"
