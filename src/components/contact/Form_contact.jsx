@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 function Form_contact() {
+  const [mail, setMail] = useState({
+    name: "",
+    object: "",
+    message: "",
+  });
+
+  const sendMail = () => {
+    axios
+      .post(`${process.env.REACT_APP_BACKEND_URL}/api/mails`, mail)
+      .then(() => {
+        alert("ok");
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
+
   return (
     <div className="Form_cont">
       <section className="contact_container">
@@ -8,39 +26,41 @@ function Form_contact() {
         <form className="form_contact">
           <section className="contact_section">
             <div className="fields_contact">
-              <label htmlFor="title">
+              <label htmlFor="name">
                 <input
                   type="text"
                   placeholder="Nom"
-                  // value=
-                  // onChange=
+                  value={mail.name}
+                  onChange={(e) => {
+                    setMail({ ...mail, name: e.target.value });
+                  }}
                 />
               </label>
 
-              <label htmlFor="link">
+              <label htmlFor="object">
                 <input
                   type="text"
                   placeholder="Objet"
-                  // value=
-                  // onChange=
+                  value={mail.object}
+                  onChange={(e) => {
+                    setMail({ ...mail, object: e.target.value });
+                  }}
                 />
               </label>
 
-              <label htmlFor="description">
+              <label htmlFor="message">
                 <textarea
-                  name="description"
+                  name="message"
                   placeholder="Message"
-                  // value=
-                  // onChange=
+                  value={mail.message}
+                  onChange={(e) => {
+                    setMail({ ...mail, message: e.target.value });
+                  }}
                 ></textarea>
               </label>
             </div>
 
-            <button
-              type="button"
-              className="button_contact"
-              // onClick=
-            >
+            <button type="button" className="button_contact" onClick={sendMail}>
               ENVOYER
             </button>
           </section>
