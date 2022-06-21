@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import GlobalContext from "../../context/context";
+import Status from "../status/Status";
 import axios from "axios";
 
 function Form_contact() {
+  const { status, setStatus } = useContext(GlobalContext);
+
   const [mail, setMail] = useState({
     name: "",
     object: "",
@@ -12,15 +16,16 @@ function Form_contact() {
     axios
       .post(`${process.env.REACT_APP_BACKEND_URL}/api/mails`, mail)
       .then(() => {
-        alert("ok");
+        setStatus("Email envoyé");
       })
       .catch((err) => {
-        alert(err);
+        setStatus("Erreur lors de la création du projet");
       });
   };
 
   return (
     <div className="Form_cont">
+      {status ? <Status /> : null}
       <section className="contact_container">
         <h2>CONTACT</h2>
         <form className="form_contact">

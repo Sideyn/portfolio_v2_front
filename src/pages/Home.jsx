@@ -10,12 +10,14 @@ import TitleDescription from "../components/home/Title_description";
 import TitleProject from "../components/home/Title_project";
 import Skills from "../components/home/Skills";
 import Navigation from "../components/navigation/Navigation";
+import Job from "../components/header/Job";
 
 function Home() {
   return (
     <div className="home">
       <Header />
       <Navigation />
+      <Job />
       <TitleDescription />
       <DescriptionHome />
       <CvBttn />

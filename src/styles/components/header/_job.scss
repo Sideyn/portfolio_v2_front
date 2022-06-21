@@ -1,0 +1,232 @@
+.container {
+    width: 50%;
+    display: flex;
+    margin-left: 20px;
+
+    .box {
+        width: 250px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 50px;
+
+            .block {
+                width: 0%;
+                height: inherit;
+                background: $color-2;
+                position: absolute;
+                animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+                display: flex;
+            }
+
+            .name {
+                font-family: $font-2;
+                color: #fff;
+                font-size: 1.3em;
+                -webkit-animation: mainFadeIn 2s forwards;
+                -o-animation: mainFadeIn 2s forwards;
+                animation: mainFadeIn 2s forwards;
+                animation-delay: 1.6s;
+                opacity: 0;
+                display: flex;
+                align-items: baseline;
+                position: relative;
+                letter-spacing: 3px;
+                filter: drop-shadow(0px 0px 3px #29f3c3);
+
+            }
+        }
+
+        .role {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            margin-top: -5px;
+
+            .block {
+                width: 0%;
+                height: inherit;
+                background: $color-2;
+                position: absolute;
+                animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+                animation-delay: 2s;
+                display: flex;
+            }
+
+            .job {
+                animation: secFadeIn 2s forwards;
+                animation-delay: 3.2s;
+                opacity: 0;
+                font-weight: 400;
+                font-family: 'Lato';
+                color: $color-2;
+                font-size: 0.7em;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        }
+    }
+}
+
+@keyframes mainBlock {
+    0% {
+        width: 0%;
+        left: 0;
+
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes secBlock {
+    0% {
+        width: 0%;
+        left: 0;
+
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes popIn {
+    0% {
+        width: 0px;
+        height: 0px;
+        background: $color-2;
+        border: 0px solid #ddd;
+        opacity: 0;
+    }
+
+    50% {
+        width: 10px;
+        height: 10px;
+        background: $color-2;
+        opacity: 1;
+        bottom: 45px;
+    }
+
+    65% {
+        width: 7px;
+        height: 7px;
+        bottom: 0px;
+        width: 15px
+    }
+
+    80% {
+        width: 10px;
+        height: 10px;
+        bottom: 20px
+    }
+
+    100% {
+        width: 7px;
+        height: 7px;
+        background: $color-2;
+        border: 0px solid #222;
+        bottom: 13px;
+
+    }
+}
+
+@keyframes secFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 3px #29f3c3);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 25%;
+        margin: 50px 0 0 50px;
+
+        .box {
+
+            .title {
+
+                .name {
+                    font-size: 1.6em;
+                }
+            }
+
+            .role {
+                margin-top: 0px;
+
+
+
+                .job {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 25%;
+        margin: 50px 0 0 50px;
+
+        .box {
+
+            .title {
+
+                .name {
+                    font-size: 2em;
+                }
+            }
+
+            .role {
+                margin-top: 5px;
+
+
+
+                .job {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
