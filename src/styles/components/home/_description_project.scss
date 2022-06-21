@@ -6,7 +6,6 @@
   line-height: 1.5;
   border: 1px solid $color-2;
   text-align: center;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -17,12 +16,12 @@
 
 @media screen and (min-width: 1024px) {
   .description_home_project {
-    margin: 50px 60px;
-  }
-}
+    margin: 50px 150px;
+    transition: 0.5s ease;
 
-@media screen and (min-width: 1440px) {
-  .description_home_project {
-    margin: 50px 70px;
+    &:hover {
+      transition: 0.5s ease;
+      transform: scale(1.1);
+    }
   }
 }

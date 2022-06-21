@@ -3,7 +3,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin: 30px 30px 20px 30px;
+        margin: 0 30px 0 30px;
 
         a {
             text-decoration: none;
@@ -14,10 +14,6 @@
                 transition: 0.4s;
                 cursor: pointer;
                 filter: drop-shadow(0px 0px 3px #29f3c3);
-
-                &:hover {
-                    color: $color-2;
-                }
             }
         }
 
@@ -30,7 +26,6 @@
                 width: 0;
                 background: $color-2;
                 position: absolute;
-                border-radius: 10px;
                 bottom: 0px;
                 left: 50%;
                 transform: translateX(-50%);
@@ -38,6 +33,8 @@
                 animation: anim 0.6s ease forwards;
                 color: $color-2;
                 filter: drop-shadow(0px 0px 3px #29f3c3);
+
+
 
                 @-webkit-keyframes anim {
                     to {
@@ -51,6 +48,23 @@
                     }
                 }
 
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navigation ul {
+        margin: 30px 30px 0 30px;
+
+
+        a {
+            text-decoration: none;
+            padding: 10px;
+
+            li:hover {
+                transition: 0.2s ease;
+                transform: scale(1.1);
             }
         }
     }
