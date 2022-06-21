@@ -1,7 +1,7 @@
 .elements_home_description {
   display: flex;
   justify-content: flex-end;
-  margin-top: 35px;
+  margin-top: 15px;
   align-items: center;
 }
 
@@ -21,10 +21,6 @@
 
 @media screen and (min-width: 768px) {
 
-  .elements_home_description {
-    margin-top: 35px;
-  }
-
   #circle_home {
     width: 8px;
     height: 8px;
@@ -34,17 +30,5 @@
   .line_home {
     width: 18vw;
     height: 2px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .elements_home_description {
-    margin-top: 45px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .elements_home_description {
-    margin-top: 55px;
   }
 }

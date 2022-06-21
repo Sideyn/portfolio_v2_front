@@ -148,7 +148,7 @@ function Form_admin() {
             setStatus("Projet modifié");
           });
       } catch (err) {
-        setStatus("Erreur lors de la modification du  projet");
+        setStatus("Erreur lors de la modification du projet");
       }
     } else {
       setAlertMsg("Clique sur télécharger");
