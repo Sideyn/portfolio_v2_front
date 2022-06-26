@@ -19,7 +19,7 @@ function Form_contact() {
         setStatus("Email envoyé");
       })
       .catch((err) => {
-        setStatus("Erreur lors de la création du projet");
+        setStatus("Erreur lors de l'envoi du message");
       });
   };
 
