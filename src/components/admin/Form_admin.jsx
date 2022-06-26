@@ -108,7 +108,7 @@ function Form_admin() {
     }
   };
 
-  // Créer, modifier ou supprimer le projet
+  // Créer, modifier le projet
   const handleProjectSubmit = async () => {
     if (actionType === "ajouter") {
       if (!project.title || !project.link || !project.description) {

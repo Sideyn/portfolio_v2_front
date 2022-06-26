@@ -36,7 +36,7 @@ function Caroussel_project() {
                 <div
                   className="slide_container_project_img"
                   style={{
-                    backgroundImage: `url(${process.env.REACT_APP_BACKEND_URL}/${project.assets[0].source})`,
+                    backgroundImage: `url(${process.env.REACT_APP_BACKEND_URL}/${project.asset[0].source})`,
                   }}
                 ></div>
 
