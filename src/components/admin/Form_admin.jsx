@@ -111,8 +111,15 @@ function Form_admin() {
   // Créer, modifier le projet
   const handleProjectSubmit = async () => {
     if (actionType === "ajouter") {
-      if (!project.title || !project.link || !project.description) {
-        setAlertMsg("Remplis tous les champs correctement");
+      if (
+        !project.title ||
+        !project.link ||
+        !project.description ||
+        !project.assets_id
+      ) {
+        setAlertMsg(
+          "Remplis tous les champs correctement et vérifie que tu as bien ajouté une image"
+        );
         setAlert(true);
       } else {
         try {
@@ -130,7 +137,6 @@ function Form_admin() {
               setStatus("Projet créé");
             });
         } catch (err) {
-          console.log(err.response.data);
           setStatus("Erreur lors de la création du projet");
         }
       }
