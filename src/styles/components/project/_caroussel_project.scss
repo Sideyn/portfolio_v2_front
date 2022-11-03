@@ -78,6 +78,8 @@
   padding: 10px;
   line-height: 1.5;
   text-align: justify;
+  overflow: scroll;
+  height: 200px;
 }
 
 @media screen and (min-width: 764px) {
@@ -102,6 +104,10 @@
 
   .title_description_project {
     line-height: 35px;
+  }
+
+  .description_project {
+    height: 250px;
   }
 }
 
@@ -138,6 +144,10 @@
   .title_description_project,
   .infos_description_project {
     margin-top: 50px;
+  }
+
+  .description_project {
+    height: 200px;
   }
 }
 

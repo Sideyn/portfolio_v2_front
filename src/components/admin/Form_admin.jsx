@@ -62,6 +62,7 @@ function Form_admin() {
     getAdmin();
     getAllAssets();
     getAllProjects();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Stock l'asset dans le state project
